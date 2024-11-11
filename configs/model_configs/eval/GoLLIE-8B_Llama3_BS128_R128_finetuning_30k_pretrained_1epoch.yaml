@@ -1,5 +1,5 @@
 #Training args
-model_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_30k
+model_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_30k_1epoch
 
 torch_dtype: bfloat16
 use_lora: true
@@ -71,7 +71,7 @@ ignore_pad_token_for_loss: true
 prompt_loss_weight: 0.0
 
 # checkpoint settings
-output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_30k_pretrained
+output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_30k_pretrained_1epoch
 overwrite_output_dir: true
 load_best_model_at_end: false
 save_strategy: "epoch"
@@ -87,6 +87,8 @@ eval_steps: 500
 eval_delay: 0
 predict_with_generate: true
 evaluate_all_checkpoints: true
+
+use_dev_inference: true # use dev set for inference (Maybe not like this)
 
 
 # batch size
@@ -117,7 +119,7 @@ logging_strategy: steps
 logging_first_step: true
 logging_steps: 5
 report_to: wandb
-run_name: "GoLLIE-8B_Llama3_BS128_R128_finetuning_30k_pretrained"
+run_name: "GoLLIE-8B_Llama3_BS128_R128_finetuning_30k_pretrained_1epoch"
 disable_tqdm: false
 
 # hub settings
