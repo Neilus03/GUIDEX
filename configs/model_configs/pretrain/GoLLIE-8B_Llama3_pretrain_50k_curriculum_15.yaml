@@ -28,7 +28,7 @@ ignore_pad_token_for_loss: true
 prompt_loss_weight: 0.0
 
 # Checkpoint settings
-output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_30k_curriculum_15
+output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_50k_curriculum_15
 overwrite_output_dir: true
 load_best_model_at_end: false
 save_strategy: "epoch"
@@ -72,7 +72,7 @@ logging_strategy: steps
 logging_first_step: true
 logging_steps: 10
 report_to: wandb
-run_name: "GoLLIE-8b_Llama3_pretrain_30k_curriculum_15"
+run_name: "GoLLIE-8b_Llama3_pretrain_50k_curriculum_15"
 disable_tqdm: false
 
 # Hub settings
