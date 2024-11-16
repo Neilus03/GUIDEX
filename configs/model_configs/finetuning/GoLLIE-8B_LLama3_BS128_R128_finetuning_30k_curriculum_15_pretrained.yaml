@@ -1,6 +1,6 @@
 #Training args
-model_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_masking_30
-lora_weights_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_masking_30_pretrained
+model_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_30k_curriculum_15
+lora_weights_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_30k_curriculum_15_pretrained
 
 torch_dtype: bfloat16
 use_lora: true
@@ -72,7 +72,7 @@ ignore_pad_token_for_loss: true
 prompt_loss_weight: 0.0
 
 # checkpoint settings
-output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_masking_30_pretrained
+output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_curriculum_15_pretrained
 overwrite_output_dir: true
 load_best_model_at_end: false
 save_strategy: "epoch"
@@ -117,7 +117,7 @@ logging_strategy: steps
 logging_first_step: true
 logging_steps: 5
 report_to: wandb
-run_name: "GoLLIE-8b_Llama3_BS128_R128_finetuning_masking_30_pretrained"
+run_name: "GoLLIE-8b_Llama3_BS128_R128_finetuning_curriculum_15_pretrained"
 disable_tqdm: false
 
 # hub settings

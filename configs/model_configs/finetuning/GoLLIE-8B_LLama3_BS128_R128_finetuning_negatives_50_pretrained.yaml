@@ -1,6 +1,6 @@
 #Training args
 model_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_negatives_50
-lora_weights_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning
+lora_weights_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_negatives_50_pretrained
 
 torch_dtype: bfloat16
 use_lora: true
