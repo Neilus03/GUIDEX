@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#SBATCH --job-name=Llama3_pretraining_50k_only_eval_ixa
+#SBATCH --job-name=Llama3_pretraining_40k_only_eval_ixa
 #SBATCH --cpus-per-task=22
 #SBATCH --nodes=1
 #SBATCH --time=3-00:00:00
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --mem=400G
-#SBATCH --output=/sorgin1/users/neildlf/GoLLIE-dev/out/Llama3_pretraining_50k_only_eval_ixa.out.txt
-#SBATCH --error=/sorgin1/users/neildlf/GoLLIE-dev/out/Llama3_pretraining_50k_only_eval_ixa.err.txt
+#SBATCH --output=/sorgin1/users/neildlf/GoLLIE-dev/out/Llama3_pretraining_40k_only_eval_ixa.out.txt
+#SBATCH --error=/sorgin1/users/neildlf/GoLLIE-dev/out/Llama3_pretraining_40k_only_eval_ixa.err.txt
 
 #module load CUDA/12.1
 #module load Python
@@ -33,4 +33,4 @@ export PYTHONPATH="$PYTHONPATH:/sorgin1/users/neildlf/GoLLIE-dev/"
 cd /sorgin1/users/neildlf/GoLLIE-dev/
 
 # Now torchrun should execute with the correct working directory
-torchrun --standalone --master_port 37227 --nproc_per_node=1 src/run.py configs/model_configs/eval/Llama3_pretraining_50k_only_eval.yaml
+torchrun --standalone --master_port 37227 --nproc_per_node=2 src/run.py configs/model_configs/eval/Llama3_pretraining_40k_only_eval.yaml

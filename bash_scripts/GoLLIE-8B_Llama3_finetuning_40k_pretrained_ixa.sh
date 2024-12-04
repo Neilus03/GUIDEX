@@ -1,13 +1,13 @@
 #!/bin/bash
 
-#SBATCH --job-name=Llama3_pretraining_50k_only_eval_ixa
+#SBATCH --job-name=GoLLIE-8B-Llama3_finetuning_40k_pretrained
 #SBATCH --cpus-per-task=22
 #SBATCH --nodes=1
 #SBATCH --time=3-00:00:00
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:2
 #SBATCH --mem=400G
-#SBATCH --output=/sorgin1/users/neildlf/GoLLIE-dev/out/Llama3_pretraining_50k_only_eval_ixa.out.txt
-#SBATCH --error=/sorgin1/users/neildlf/GoLLIE-dev/out/Llama3_pretraining_50k_only_eval_ixa.err.txt
+#SBATCH --output=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_finetuning_40k_pretrained.out.txt
+#SBATCH --error=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_finetuning_40k_pretrained.err.txt
 
 #module load CUDA/12.1
 #module load Python
@@ -24,7 +24,6 @@ export OMP_NUM_THREADS=16
 
 echo CUDA_VISIBLE_DEVICES "${CUDA_VISIBLE_DEVICES}"
 
-# Call this script from root directory as: sbatch bash_scripts/GoLLIE-8B_Llama3_ixa.sh
 
 # Add project root to PYTHONPATH
 export PYTHONPATH="$PYTHONPATH:/sorgin1/users/neildlf/GoLLIE-dev/" 
@@ -33,4 +32,5 @@ export PYTHONPATH="$PYTHONPATH:/sorgin1/users/neildlf/GoLLIE-dev/"
 cd /sorgin1/users/neildlf/GoLLIE-dev/
 
 # Now torchrun should execute with the correct working directory
-torchrun --standalone --master_port 37227 --nproc_per_node=1 src/run.py configs/model_configs/eval/Llama3_pretraining_50k_only_eval.yaml
+torchrun --standalone --master_port 37227 --nproc_per_node=2 src/run.py configs/model_configs/finetuning/GoLLIE-8B_LLama3_BS128_R128_finetuning_40k_pretrained.yaml
+torchrun --standalone --master_port 37227 --nproc_per_node=2 src/run.py configs/model_configs/eval/GoLLIE-8B_Llama3_BS128_R128_finetuning_40k_pretrained.yaml
