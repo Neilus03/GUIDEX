@@ -9,6 +9,9 @@ import torch
 import torch.utils.data
 from datasets import DatasetDict
 
+from peft import PeftModel
+import copy
+from copy import deepcopy
 from src.config import DataTrainingArguments, ModelArguments
 from src.dataset.dataset import CollieDataset, DataCollatorForCoLLIE, CollieDatasetWithTransformations
 
@@ -155,6 +158,14 @@ def train_collie(
     # tokenizer.save_pretrained(training_args.output_dir)
 
 
+def save_merged_model(model, tokenizer, output_dir):
+    """Saves a merged LoRA model and tokenizer."""
+    os.makedirs(output_dir, exist_ok=True)
+    model.config.save_pretrained(output_dir)
+    model.save_pretrained(output_dir)
+    tokenizer.save_pretrained(output_dir)
+    logging.info(f"Merged model saved to: {output_dir}")
+
 def inference_collie(
     model_args: ModelArguments,
     data_args: DataTrainingArguments,
@@ -266,6 +277,37 @@ def inference_collie(
         max_memory_MB=model_args.max_memory_MB,
     )
     
+
+    '''
+    merged_model_path = os.path.join(training_args.output_dir, "merged_models") # Your desired path
+
+    if model_args.use_lora and not model_args.quantization_inference:
+        if not model_args.merge_lora_before_inference:
+            merged_model = deepcopy(model).cpu() # Ensure merged model is on CPU before merging/saving
+            merged_model = PeftModel.from_pretrained(merged_model, lora_weights_name_or_path)
+            merged_model = merged_model.merge_and_unload(progressbar=True)
+            save_merged_model(merged_model, tokenizer, merged_model_path)
+            logging.info(f"Merged and saved the model to {merged_model_path}")
+
+
+            del merged_model # Free up memory after usage
+            torch.cuda.empty_cache()
+
+
+        # In the case merge_lora_before_inference=True and a merged model exists in output_dir/merged_model
+        elif os.path.exists(os.path.join(training_args.output_dir, "merged_model")):
+            logging.info("Merged model will be loaded from " + training_args.output_dir + "merged_model")
+
+        # In the case merge_lora_before_inference=True and NO merged model exists in output_dir, and we can't modify load_model
+        # Copy current unmerged model to /merged_models so that there is a pytorch_model.bin in the merged_models folder
+        # that will allow the script to continue execution
+        elif not os.path.exists(merged_model_path):
+             save_merged_model(model, tokenizer, merged_model_path)  # Save the merged model
+             logging.info(f"Merged and saved the model to {merged_model_path}")
+
+    '''
+
+
     model.to('cuda')
 
     trainer = CollieTrainer(
