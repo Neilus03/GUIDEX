@@ -2,7 +2,7 @@
 model_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_30k_1epoch
 lora_weights_name_or_path: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning_30k_pretrained_1epoch
 
-torch_dtype: bfloat16
+torch_dtype: bfloat16 
 use_lora: true
 quantization: 4
 quantization_inference: null
