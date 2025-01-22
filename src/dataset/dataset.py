@@ -22,9 +22,7 @@ import os
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
-#i want to import the functions from data_transformations.py which is located at 
-# /sorgin1/users/neildlf/GoLLIE-dev/src/data_transformations.py while this file is
-# located at /sorgin1/users/neildlf/GoLLIE-dev/src/dataset/dataset.py
+
 from data_transformations import apply_entity_type_masking, apply_negatives
 
 
