@@ -1,5 +1,6 @@
 import argparse
 import json
+import yaml
 
 from src.generate_data import get_class
 

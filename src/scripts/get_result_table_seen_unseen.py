@@ -4,53 +4,7 @@ import json
 import numpy as np
 from tabulate import tabulate
 
-
 ZERO_DATASETS = [
-    (
-        "broadtwitter.ner",
-        "entities",
-        {"seen": {"Location", "Organization", "Person"}, "unseen": {}},
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
-    (
-        "casie.ee",
-        "events",
-        {
-            "seen": {},
-            "unseen": {
-                "DatabreachAttack",
-                "PhisingAttack",
-                "RansomAttack",
-                "VulnerabilityDiscover",
-                "VulnerabilityPatch",
-            },
-        },
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
     (
         "crossner.crossner_ai",
         "entities",
@@ -93,14 +47,14 @@ ZERO_DATASETS = [
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
+        },
         {
             "TP": 0,
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
+        },
+        [0.0],
     ),
     (
         "crossner.crossner_music",
@@ -114,14 +68,14 @@ ZERO_DATASETS = [
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
+        },
         {
             "TP": 0,
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
+        },
+        [0.0],
     ),
     (
         "crossner.crossner_politics",
@@ -135,14 +89,14 @@ ZERO_DATASETS = [
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
+        },
         {
             "TP": 0,
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
+        },
+        [0.0],
     ),
     (
         "crossner.crossner_natural_science",
@@ -176,83 +130,14 @@ ZERO_DATASETS = [
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
-    (
-        "e3c.ner",
-        "entities",
-        {"seen": {"ClinicalEntity"}, "unseen": {}},
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
-    (
-        "fabner.ner",
-        "entities",
-        {
-            "seen": {"Biomedical"},
-            "unseen": {
-                "Material",
-                "ManufacturingProcess",
-                "MachineEquipment",
-                "Application",
-                "EngineeringFeatures",
-                "MechanicalProperties",
-                "ProcessCharacterization",
-                "ProcessParameters",
-                "EnablingTechnology",
-                "ConceptPrinciples",
-                "ManufacturingStandards",
-            },
         },
         {
             "TP": 0,
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
-    (
-        "harveyner.ner",
-        "entities",
-        {"seen": {}, "unseen": {"Point", "Area", "Road", "River"}},
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
+        },
+        [0.0],
     ),
     (
         "mitmovie.ner",
@@ -278,14 +163,14 @@ ZERO_DATASETS = [
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
+        },
         {
             "TP": 0,
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
+        },
+        [0.0],
     ),
     (
         "mitrestaurant.ner",
@@ -296,110 +181,25 @@ ZERO_DATASETS = [
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
-    (
-        "multinerd.ner",
-        "entities",
-        {
-            "seen": {"Person", "Location", "Organization", "Biological", "Disease", "Event", "Time", "Vehicle"},
-            "unseen": {"Animal", "Celestial", "Food", "Instrument", "Media", "Plant", "Mythological"},
         },
         {
             "TP": 0,
             "total_pos": 0,
             "total_pre": 0,
             "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
-    (
-        "wikievents.ner",
-        "entities",
-        {
-            "seen": {
-                "CommercialProduct",
-                "Facility",
-                "GPE",
-                "Location",
-                "MedicalHealthIssue",
-                "Money",
-                "Organization",
-                "Person",
-                "JobTitle",
-                "Numeric",
-                "Vehicle",
-                "Weapon",
-            },
-            "unseen": {"Abstract", "BodyPart", "Information", "SideOfConflict"},
         },
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
-    (
-        "wikievents.ee",
-        "events",
-        {
-            "seen": {
-                "ConflictEvent",
-                "ContactEvent",
-                "GenericCrimeEvent",
-                "JusticeEvent",
-                "MedicalEvent",
-                "MovementTransportEvent",
-                "PersonnelEvent",
-                "TransactionEvent",
-            },
-            "unseen": {"ArtifactExistanceEvent", "CognitiveEvent", "ControlEvent", "DisasterEvent", "LifeEvent"},
-        },
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Seen
-        {
-            "TP": 0,
-            "total_pos": 0,
-            "total_pre": 0,
-            "F1": 0,
-        },  # Unseen
-        [0.0],  # Total F1
-    ),
+        [0.0],
+    )
 ]
 
 PATHS = {
-    "Baseline": "/tartalo02/users/osainz006/models/collie/Baseline-7b_CodeLLaMA{seed}/task_scores.json",
-    "GoLLIE": "/tartalo02/users/osainz006/models/collie/CoLLIE+-7b_CodeLLaMA{seed}/task_scores.json",
+    "Llama3.1-8B": "/sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128/checkpoint-5162/task_scores.json",
+    "Llama3.1-8B+GuideX": "/sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain/checkpoint-1000/task_scores.json",
     # "w/o Candidates": "/tartalo02/users/osainz006/models/collie/CoLLIE-7b_CodeLLaMA{seed}/task_scores.json",
     # "w/o Masking": "/tartalo02/users/osainz006/models/collie/CoLLIE+-7b_CodeLLaMA{seed}_abl_masking/task_scores.json",
     # "w/o Dropout": "/tartalo02/users/osainz006/models/collie/CoLLIE+-7b_CodeLLaMA{seed}_abl_dropout/task_scores.json",
-    "13B": "/tartalo02/users/osainz006/models/collie/CoLLIE+-13b_CodeLLaMA{seed}/task_scores.json",
-    "34B": "/tartalo02/users/osainz006/models/collie/CoLLIE+-34b_CodeLLaMA{seed}/task_scores.json",
+    "GoLLIE-Llama3.1-8B": "/sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128/checkpoint-5162/task_scores.json",
+    "GoLLIE-Llama3.1-8B+GuideX": "/sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_finetuning/checkpoint-2581/task_scores.json",
 }
 
 SEEDS = ["", "_2", "_3"]
@@ -411,25 +211,21 @@ for dataset, task, entity_dict, seen_scores, unseen_scores, general_f1 in ZERO_D
     for entity in entity_dict["seen"]:
         seen_entity_f1[f"{dataset}_{entity}"] = []
         for i in range(len(SEEDS)):
-            seen_entity_f1[f"{dataset}_{entity}"].append(
-                {
-                    "TP": 0,
-                    "total_pos": 0,
-                    "total_pre": 0,
-                    "F1": 0,
-                }
-            )
+            seen_entity_f1[f"{dataset}_{entity}"].append({
+                "TP": 0,
+                "total_pos": 0,
+                "total_pre": 0,
+                "F1": 0,
+            })
     for entity in entity_dict["unseen"]:
         unseen_entity_f1[f"{dataset}_{entity}"] = []
         for i in range(len(SEEDS)):
-            unseen_entity_f1[f"{dataset}_{entity}"].append(
-                {
-                    "TP": 0,
-                    "total_pos": 0,
-                    "total_pre": 0,
-                    "F1": 0,
-                }
-            )
+            unseen_entity_f1[f"{dataset}_{entity}"].append({
+                "TP": 0,
+                "total_pos": 0,
+                "total_pre": 0,
+                "F1": 0,
+            })
 
 for name, path in PATHS.items():
     print()
@@ -475,26 +271,18 @@ for name, path in PATHS.items():
         for _, _, _, seen_scores, unseen_scores, _ in ZERO_DATASETS_iter:
             precision = seen_scores["TP"] / seen_scores["total_pre"] if seen_scores["total_pre"] > 0 else 0.0
             recall = seen_scores["TP"] / seen_scores["total_pos"] if seen_scores["total_pos"] > 0 else 0.0
-            seen_scores["F1"] = (
-                2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0
-            ) * 100
+            seen_scores["F1"] = (2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0) * 100
 
             precision = unseen_scores["TP"] / unseen_scores["total_pre"] if unseen_scores["total_pre"] > 0 else 0.0
             recall = unseen_scores["TP"] / unseen_scores["total_pos"] if unseen_scores["total_pos"] > 0 else 0.0
-            unseen_scores["F1"] = (
-                2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0
-            ) * 100
+            unseen_scores["F1"] = (2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0) * 100
 
         iter_results.append(ZERO_DATASETS_iter)
-        # print(ZERO_DATASETS_iter)
 
     result_table = []
-
     dataset_names = []
     for dataset, task, entity_dict, seen_scores, unseen_scores, _ in iter_results[0]:
         dataset_names.append(dataset)
-
-    # print(dataset_names)
 
     avg_seen = [[] for x in range(len(iter_results))]
     avg_unseen = [[] for x in range(len(iter_results))]
@@ -514,7 +302,6 @@ for name, path in PATHS.items():
             avg_unseen[it].append(unseen_scores["F1"])
             avg_general[it].append(f1[0])
 
-        # print(general_f1s)
         result_table.append(
             [
                 dataset_name,
@@ -527,11 +314,9 @@ for name, path in PATHS.items():
             ]
         )
 
-    # Append averages
     avg_seen = np.array(avg_seen).mean(1)
     avg_unseen = np.array(avg_unseen).mean(1)
     avg_general = np.array(avg_general).mean(1)
-    # print(avg_general)
     result_table.append(
         [
             "Average",
@@ -548,22 +333,18 @@ for name, path in PATHS.items():
 
     print(tabulate(result_table, headers=columns, floatfmt=".1f"))
 
-    # Build bar plot
+    # Build bar plot for entity F1 scores
     for entity_name, scores in unseen_entity_f1.items():
         for i in range(len(scores)):
             precision = scores[i]["TP"] / scores[i]["total_pre"] if scores[i]["total_pre"] > 0 else 0.0
             recall = scores[i]["TP"] / scores[i]["total_pos"] if scores[i]["total_pos"] > 0 else 0.0
-            scores[i]["F1"] = (
-                2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0
-            ) * 100
+            scores[i]["F1"] = (2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0) * 100
 
     for entity_name, scores in seen_entity_f1.items():
         for i in range(len(scores)):
             precision = scores[i]["TP"] / scores[i]["total_pre"] if scores[i]["total_pre"] > 0 else 0.0
             recall = scores[i]["TP"] / scores[i]["total_pos"] if scores[i]["total_pos"] > 0 else 0.0
-            scores[i]["F1"] = (
-                2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0
-            ) * 100
+            scores[i]["F1"] = (2 * precision * recall / (precision + recall) if (precision + recall) > 0.0 else 0.0) * 100
 
     seen_entity_f1_avg = {}
     unseen_entity_f1_avg = {}
@@ -574,13 +355,35 @@ for name, path in PATHS.items():
     for entity_name, scores in seen_entity_f1.items():
         seen_entity_f1_avg[entity_name] = np.array([score["F1"] for score in scores]).mean(0)
 
-    # Print seen_entity_f1_avg as table
+    # Save the results as a JSON file
+    json_filename = f"{name}_results.json"
+    results_dict = {
+        "model": name,
+        "datasets": [
+            {
+                "dataset": row[0],
+                "seen_f1": row[1],
+                "seen_f1_std": row[2],
+                "unseen_f1": row[3],
+                "unseen_f1_std": row[4],
+                "total_f1": row[5],
+                "total_f1_std": row[6],
+            }
+            for row in result_table
+        ],
+        "entity_f1": {
+            "seen": seen_entity_f1_avg,
+            "unseen": unseen_entity_f1_avg,
+        },
+    }
+    with open(json_filename, "w") as f:
+        json.dump(results_dict, f, indent=4)
+    print(f"Results saved to {json_filename}")
 
     print("Seen")
     for entity_name, score in seen_entity_f1_avg.items():
         print(entity_name, score)
 
-    # Print unseen_entity_f1_avg as table
     print("Unseen")
     for entity_name, score in unseen_entity_f1_avg.items():
         print(entity_name, score)
