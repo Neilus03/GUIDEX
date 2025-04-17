@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #SBATCH --job-name=GoLLIE-8B-Llama3_finetuning_seed2
-#SBATCH --cpus-per-task=22
+#SBATCH --cpus-per-task=16
 #SBATCH --nodes=1
 #SBATCH --time=3-00:00:00
 #SBATCH --gres=gpu:1
-#SBATCH --mem=400G
+#SBATCH --mem=200G
 #SBATCH --output=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_finetuning_seed2.out.txt
 #SBATCH --error=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_finetuning_seed2.err.txt
 

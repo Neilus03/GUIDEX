@@ -1,7 +1,12 @@
 .slurm/*
 .vscode/*
 .ignore/
-data
+data/ace05
+data/baseline
+data/processed
+data/pretraining_data_processed_w_examples
+data/GUIDEX_gen/raw_outputs
+data/processed_w_examples
 wandb/*
 assets/plots/*
 
