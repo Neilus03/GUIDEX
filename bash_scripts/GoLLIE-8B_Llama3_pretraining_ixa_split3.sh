@@ -6,8 +6,8 @@
 #SBATCH --time=3-00:00:00
 #SBATCH --gres=gpu:1
 #SBATCH --mem=200G
-#SBATCH --output=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_pretraining_split2.out.txt
-#SBATCH --error=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_pretraining_split2.err.txt
+#SBATCH --output=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_pretraining_split3.out.txt
+#SBATCH --error=/sorgin1/users/neildlf/GoLLIE-dev/out/GoLLIE-8B-Llama3_pretraining_split3.err.txt
 
 #module load CUDA/12.1
 #module load Python
@@ -24,7 +24,7 @@ export OMP_NUM_THREADS=16
 
 echo CUDA_VISIBLE_DEVICES "${CUDA_VISIBLE_DEVICES}"
 
-# Call this script from root directory as: sbatch bash_scripts/GoLLIE-8B_Llama3_ixa_split2.sh
+# Call this script from root directory as: sbatch bash_scripts/GoLLIE-8B_Llama3_ixa_split3.sh
 
 # Add project root to PYTHONPATH
 export PYTHONPATH="$PYTHONPATH:/sorgin1/users/neildlf/GoLLIE-dev/" 
@@ -33,6 +33,6 @@ export PYTHONPATH="$PYTHONPATH:/sorgin1/users/neildlf/GoLLIE-dev/"
 cd /sorgin1/users/neildlf/GoLLIE-dev/
 
 # Now torchrun should execute with the correct working directory
-torchrun --standalone --master_port 37227 --nproc_per_node=1 src/run.py configs/model_configs/pretrain/GoLLIE-8B_Llama3_BS128_R128_pretrain_split2.yaml
-#torchrun --standalone --master_port 37227 --nproc_per_node=4 src/run.py configs/model_configs/eval/GoLLIE-8B_Llama3_BS128_R128_pretrain_split2.yaml
+torchrun --standalone --master_port 37227 --nproc_per_node=1 src/run.py configs/model_configs/pretrain/GoLLIE-8B_Llama3_BS128_R128_pretrain_split3.yaml
+#torchrun --standalone --master_port 37227 --nproc_per_node=4 src/run.py configs/model_configs/eval/GoLLIE-8B_Llama3_BS128_R128_pretrain_split3.yaml
 
