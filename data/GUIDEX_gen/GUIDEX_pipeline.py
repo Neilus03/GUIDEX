@@ -40,10 +40,17 @@ import torch
 from huggingface_hub import login
 from tqdm import tqdm
 from vllm import LLM, SamplingParams
+import os
 
 # ─────────────────── configuration ────────────────────
 MODEL_NAME         = "meta-llama/Llama-3.1-70B-Instruct"
-HF_TOKEN           = "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"  # replace with env var
+
+# Load the Hugging Face token from an environment variable
+HF_TOKEN = os.environ.get("HF_TOKEN")
+
+if not HF_TOKEN:
+    raise ValueError("Hugging Face token not found. Please set the HF_TOKEN environment variable.")
+
 CACHE_DIR          = str(Path.home() / ".cache/huggingface")
 RAW_DIR            = Path("raw_outputs")
 LOG_FILE           = "guidex_pipeline.log"
