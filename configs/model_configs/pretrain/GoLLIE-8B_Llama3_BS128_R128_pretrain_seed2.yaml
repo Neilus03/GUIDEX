@@ -29,7 +29,7 @@ ignore_pad_token_for_loss: true
 prompt_loss_weight: 0.0
 
 # checkpoint settings
-output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_seed3
+output_dir: /sorgin1/users/neildlf/GoLLIE-dev/model/GoLLIE+-8b_Llama3_BS128_R128_pretrain_seed2
 overwrite_output_dir: true
 load_best_model_at_end: false
 save_strategy: "epoch"
@@ -47,7 +47,7 @@ predict_with_generate: true
 evaluate_all_checkpoints: true
 
 # batch size
-per_device_train_batch_size: 4 #4 #16
+per_device_train_batch_size: 2 #4 #16
 per_device_eval_batch_size: 2 #2 #8
 gradient_accumulation_steps: 2
 generation_num_beams: 1
@@ -74,7 +74,7 @@ logging_strategy: steps
 logging_first_step: true
 logging_steps: 10
 report_to: wandb
-run_name: "GoLLIE-8b_Llama3_BS128_R128_pretrain_seed3"
+run_name: "GoLLIE-8b_Llama3_BS128_R128_pretrain_seed2"
 disable_tqdm: false
 
 # hub settings
