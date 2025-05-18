@@ -158,3 +158,6 @@ err.*
 *.pt
 
 model/GoLLIE*
+model/Gold_FT*
+model/GUIDEX_FT*
+model/GUIDEX+Gold_FT*
