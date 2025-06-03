@@ -7,11 +7,14 @@ This repository contains the official implementation of GuideX, a novel method f
 Our paper is available at [neilus03.github.io/guidex.com](neilus03.github.io/guidex.com). Please cite our work if you use our code or models:
 
 ```bibtex
-@article{guidex2025,
-  title={GuideX: Guided Synthetic Data Generation for Zero-Shot Information Extraction},
-  author={Neil De La Fuente and Oscar Sainz and Iker García-Ferrero and Eneko Agirre},
-  journal={Findings of the Association for Computational Linguistics},
-  year={2025}
+@misc{delafuente2025guidexguidedsyntheticdata,
+      title={GuideX: Guided Synthetic Data Generation for Zero-Shot Information Extraction}, 
+      author={Neil De La Fuente and Oscar Sainz and Iker García-Ferrero and Eneko Agirre},
+      year={2025},
+      eprint={2506.00649},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.00649}, 
 }
 ```
 
