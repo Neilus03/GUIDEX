@@ -424,7 +424,7 @@ class Event:
                             is_correct &= _is_correct
                             _var.append(v)
                         if is_correct:
-                            return (is_correct, _var)  # Small difference here to allow empty lists
+                            return (is_correct, _var if len(_var) else None)
 
                     return (is_correct, _var)
                     # return any(all(check_types(v, _t) for v in var) if isinstance(var, list) else False for _t in _type.__args__)
@@ -919,6 +919,10 @@ class AnnotationList(list):
                 _elems = []
                 reading = False
                 parse_error = True
+
+        # Ensure _elems is a list. If eval(ann) results in a single object, wrap it.
+        if not isinstance(_elems, list):
+            _elems = [_elems]
 
         self = cls(_elems, parse_error=parse_error)
 
