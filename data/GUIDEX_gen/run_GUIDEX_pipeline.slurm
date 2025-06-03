@@ -43,7 +43,7 @@ python -c "import torch; print('CUDA available:', torch.cuda.is_available()); pr
 # Run the pipeline –‑ fill in the paths your script expects
 srun python /sorgin1/users/neildlf/GoLLIE-dev/data/GUIDEX_gen/GUIDEX_pipeline.py \
       --input  /sorgin1/users/neildlf/GoLLIE-dev/data/GUIDEX_gen/fineweb-edu-100k.json \
-      --output /sorgin1/users/neildlf/GoLLIE-dev/data/GUIDEX_gen/GUIDEX-100k.json \
+      --output /sorgin1/users/neildlf/GoLLIE-dev/data/GUIDEX_gen/GUIDEX-100k_trial.json \
       --subset 10000 \
       --batch-size 32
 echo "SLURM job script completed"

@@ -1,0 +1,2626 @@
+{
+    "parameters": {
+        "guidex_data_path": "/sorgin1/users/neildlf/GoLLIE-dev/data/pretraining_data_processed_w_examples/train_data_10k_valid.jsonl",
+        "gold_data_directory": "/sorgin1/users/neildlf/GoLLIE-dev/data/processed_w_examples",
+        "output_report_file": "overlap_report_short.json"
+    },
+    "guidex_processing": {
+        "unique_types_count": 28662,
+        "processing_details": {
+            "processed_lines": 10000,
+            "skipped_line_counts": {
+                "json": 0,
+                "ast": 0,
+                "other": 0
+            }
+        }
+    },
+    "train_set_analysis": {
+        "files_processed_count": 102,
+        "aggregate_unique_types_count": 243,
+        "datasets": {
+            "ace05.eae": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 33,
+                "average_overlap_percentage": 12.12,
+                "per_file_reports": {
+                    "ace05.eae.train.0.jsonl": {
+                        "unique_types_count": 33,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 12.12
+                        },
+                        "processing_details": {
+                            "processed_lines": 3843,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.eae.train.24.jsonl": {
+                        "unique_types_count": 33,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 12.12
+                        },
+                        "processing_details": {
+                            "processed_lines": 3843,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.eae.train.42.jsonl": {
+                        "unique_types_count": 33,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 12.12
+                        },
+                        "processing_details": {
+                            "processed_lines": 3843,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.ee": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 8,
+                "average_overlap_percentage": 12.5,
+                "per_file_reports": {
+                    "ace05.ee.train.0.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 12.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.ee.train.24.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 12.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.ee.train.42.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 12.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 7,
+                "average_overlap_percentage": 71.43,
+                "per_file_reports": {
+                    "ace05.ner.train.0.jsonl": {
+                        "unique_types_count": 7,
+                        "overlap_with_guidex": {
+                            "count": 5,
+                            "percentage": 71.43
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.ner.train.24.jsonl": {
+                        "unique_types_count": 7,
+                        "overlap_with_guidex": {
+                            "count": 5,
+                            "percentage": 71.43
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.ner.train.42.jsonl": {
+                        "unique_types_count": 7,
+                        "overlap_with_guidex": {
+                            "count": 5,
+                            "percentage": 71.43
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.rc": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 17,
+                "average_overlap_percentage": 41.18,
+                "per_file_reports": {
+                    "ace05.rc.train.0.jsonl": {
+                        "unique_types_count": 17,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 41.18
+                        },
+                        "processing_details": {
+                            "processed_lines": 5691,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.rc.train.24.jsonl": {
+                        "unique_types_count": 17,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 41.18
+                        },
+                        "processing_details": {
+                            "processed_lines": 5691,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.rc.train.42.jsonl": {
+                        "unique_types_count": 17,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 41.18
+                        },
+                        "processing_details": {
+                            "processed_lines": 5691,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.re": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 6,
+                "average_overlap_percentage": 0.0,
+                "per_file_reports": {
+                    "ace05.re.train.0.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.re.train.24.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.re.train.42.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.ver": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 6,
+                "average_overlap_percentage": 66.67,
+                "per_file_reports": {
+                    "ace05.ver.train.0.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 66.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.ver.train.24.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 66.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ace05.ver.train.42.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 66.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 19217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "bc5cdr.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 2,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "bc5cdr.ner.train.0.jsonl": {
+                        "unique_types_count": 2,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 4561,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "bc5cdr.ner.train.24.jsonl": {
+                        "unique_types_count": 2,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 4561,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "bc5cdr.ner.train.42.jsonl": {
+                        "unique_types_count": 2,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 4561,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "broadtwitter.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 3,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "broadtwitter.ner.train.0.jsonl": {
+                        "unique_types_count": 3,
+                        "overlap_with_guidex": {
+                            "count": 3,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 5342,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "broadtwitter.ner.train.24.jsonl": {
+                        "unique_types_count": 3,
+                        "overlap_with_guidex": {
+                            "count": 3,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 5342,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "broadtwitter.ner.train.42.jsonl": {
+                        "unique_types_count": 3,
+                        "overlap_with_guidex": {
+                            "count": 3,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 5342,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "conll03.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 4,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "conll03.ner.train.0.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 14041,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "conll03.ner.train.24.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 14041,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "conll03.ner.train.42.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 14041,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_ai": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 14,
+                "average_overlap_percentage": 92.86,
+                "per_file_reports": {
+                    "crossner.crossner_ai.train.0.jsonl": {
+                        "unique_types_count": 14,
+                        "overlap_with_guidex": {
+                            "count": 13,
+                            "percentage": 92.86
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_ai.train.24.jsonl": {
+                        "unique_types_count": 14,
+                        "overlap_with_guidex": {
+                            "count": 13,
+                            "percentage": 92.86
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_ai.train.42.jsonl": {
+                        "unique_types_count": 14,
+                        "overlap_with_guidex": {
+                            "count": 13,
+                            "percentage": 92.86
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_literature": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 91.67,
+                "per_file_reports": {
+                    "crossner.crossner_literature.train.0.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 91.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_literature.train.24.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 91.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_literature.train.42.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 91.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_music": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 13,
+                "average_overlap_percentage": 84.62,
+                "per_file_reports": {
+                    "crossner.crossner_music.train.0.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 84.62
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_music.train.24.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 84.62
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_music.train.42.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 84.62
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_natural_science": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 17,
+                "average_overlap_percentage": 88.24,
+                "per_file_reports": {
+                    "crossner.crossner_natural_science.train.0.jsonl": {
+                        "unique_types_count": 17,
+                        "overlap_with_guidex": {
+                            "count": 15,
+                            "percentage": 88.24
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_natural_science.train.24.jsonl": {
+                        "unique_types_count": 17,
+                        "overlap_with_guidex": {
+                            "count": 15,
+                            "percentage": 88.24
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_natural_science.train.42.jsonl": {
+                        "unique_types_count": 17,
+                        "overlap_with_guidex": {
+                            "count": 15,
+                            "percentage": 88.24
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_politics": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 9,
+                "average_overlap_percentage": 88.89,
+                "per_file_reports": {
+                    "crossner.crossner_politics.train.0.jsonl": {
+                        "unique_types_count": 9,
+                        "overlap_with_guidex": {
+                            "count": 8,
+                            "percentage": 88.89
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_politics.train.24.jsonl": {
+                        "unique_types_count": 9,
+                        "overlap_with_guidex": {
+                            "count": 8,
+                            "percentage": 88.89
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner.crossner_politics.train.42.jsonl": {
+                        "unique_types_count": 9,
+                        "overlap_with_guidex": {
+                            "count": 8,
+                            "percentage": 88.89
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_ai": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 13,
+                "average_overlap_percentage": 92.31,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_ai.train.0.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 92.31
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_ai.train.24.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 92.31
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_ai.train.42.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 92.31
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_literature": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 11,
+                "average_overlap_percentage": 90.91,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_literature.train.0.jsonl": {
+                        "unique_types_count": 11,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 90.91
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_literature.train.24.jsonl": {
+                        "unique_types_count": 11,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 90.91
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_literature.train.42.jsonl": {
+                        "unique_types_count": 11,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 90.91
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_music": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 83.33,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_music.train.0.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 83.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_music.train.24.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 83.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_music.train.42.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 83.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 100,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_natural_science": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 16,
+                "average_overlap_percentage": 87.5,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_natural_science.train.0.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 14,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_natural_science.train.24.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 14,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_natural_science.train.42.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 14,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_politics": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 8,
+                "average_overlap_percentage": 87.5,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_politics.train.0.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_politics.train.24.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "crossner_womisc.crossner_politics.train.42.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 200,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "diann.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 1,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "diann.ner.train.0.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 3976,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "diann.ner.train.24.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 3976,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "diann.ner.train.42.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 3976,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "e3c.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 1,
+                "average_overlap_percentage": 0.0,
+                "per_file_reports": {
+                    "e3c.ner.train.0.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 669,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "e3c.ner.train.24.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 669,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "e3c.ner.train.42.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 669,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "fabner.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 33.33,
+                "per_file_reports": {
+                    "fabner.ner.train.0.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 33.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 9435,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "fabner.ner.train.24.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 33.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 9435,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "fabner.ner.train.42.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 33.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 9435,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "harveyner.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 4,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "harveyner.ner.train.0.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 3967,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "harveyner.ner.train.24.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 3967,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "harveyner.ner.train.42.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 3967,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "mitmovie.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 75.0,
+                "per_file_reports": {
+                    "mitmovie.ner.train.0.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 9,
+                            "percentage": 75.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 9000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "mitmovie.ner.train.24.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 9,
+                            "percentage": 75.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 9000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "mitmovie.ner.train.42.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 9,
+                            "percentage": 75.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 9000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "mitrestaurant.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 8,
+                "average_overlap_percentage": 87.5,
+                "per_file_reports": {
+                    "mitrestaurant.ner.train.0.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 7000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "mitrestaurant.ner.train.24.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 7000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "mitrestaurant.ner.train.42.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 7000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "multinerd.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 15,
+                "average_overlap_percentage": 80.0,
+                "per_file_reports": {
+                    "multinerd.ner.train.0.jsonl": {
+                        "unique_types_count": 15,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 80.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 262560,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "multinerd.ner.train.24.jsonl": {
+                        "unique_types_count": 15,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 80.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 262560,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "multinerd.ner.train.42.jsonl": {
+                        "unique_types_count": 15,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 80.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 262560,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ncbidisease.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 1,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "ncbidisease.ner.train.0.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 5433,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ncbidisease.ner.train.24.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 5433,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ncbidisease.ner.train.42.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 5433,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ontonotes5.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 18,
+                "average_overlap_percentage": 55.56,
+                "per_file_reports": {
+                    "ontonotes5.ner.train.0.jsonl": {
+                        "unique_types_count": 18,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 55.56
+                        },
+                        "processing_details": {
+                            "processed_lines": 115812,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ontonotes5.ner.train.24.jsonl": {
+                        "unique_types_count": 18,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 55.56
+                        },
+                        "processing_details": {
+                            "processed_lines": 115812,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "ontonotes5.ner.train.42.jsonl": {
+                        "unique_types_count": 18,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 55.56
+                        },
+                        "processing_details": {
+                            "processed_lines": 115812,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "rams.eae": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 38,
+                "average_overlap_percentage": 15.79,
+                "per_file_reports": {
+                    "rams.eae.train.0.jsonl": {
+                        "unique_types_count": 38,
+                        "overlap_with_guidex": {
+                            "count": 6,
+                            "percentage": 15.79
+                        },
+                        "processing_details": {
+                            "processed_lines": 7329,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "rams.eae.train.24.jsonl": {
+                        "unique_types_count": 38,
+                        "overlap_with_guidex": {
+                            "count": 6,
+                            "percentage": 15.79
+                        },
+                        "processing_details": {
+                            "processed_lines": 7329,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "rams.eae.train.42.jsonl": {
+                        "unique_types_count": 38,
+                        "overlap_with_guidex": {
+                            "count": 6,
+                            "percentage": 15.79
+                        },
+                        "processing_details": {
+                            "processed_lines": 7329,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "tacred.sf": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 5,
+                "average_overlap_percentage": 40.0,
+                "per_file_reports": {
+                    "tacred.sf.train.0.jsonl": {
+                        "unique_types_count": 5,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 40.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 10027,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "tacred.sf.train.24.jsonl": {
+                        "unique_types_count": 5,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 40.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 10027,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "tacred.sf.train.42.jsonl": {
+                        "unique_types_count": 5,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 40.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 10027,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wikievents.eae": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 38,
+                "average_overlap_percentage": 28.95,
+                "per_file_reports": {
+                    "wikievents.eae.train.0.jsonl": {
+                        "unique_types_count": 38,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 28.95
+                        },
+                        "processing_details": {
+                            "processed_lines": 2862,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wikievents.eae.train.24.jsonl": {
+                        "unique_types_count": 38,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 28.95
+                        },
+                        "processing_details": {
+                            "processed_lines": 2862,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wikievents.eae.train.42.jsonl": {
+                        "unique_types_count": 38,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 28.95
+                        },
+                        "processing_details": {
+                            "processed_lines": 2862,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wikievents.ee": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 13,
+                "average_overlap_percentage": 15.38,
+                "per_file_reports": {
+                    "wikievents.ee.train.0.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 15.38
+                        },
+                        "processing_details": {
+                            "processed_lines": 6808,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wikievents.ee.train.24.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 15.38
+                        },
+                        "processing_details": {
+                            "processed_lines": 6808,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wikievents.ee.train.42.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 15.38
+                        },
+                        "processing_details": {
+                            "processed_lines": 6808,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wikievents.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 16,
+                "average_overlap_percentage": 43.75,
+                "per_file_reports": {
+                    "wikievents.ner.train.0.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 43.75
+                        },
+                        "processing_details": {
+                            "processed_lines": 6808,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wikievents.ner.train.24.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 43.75
+                        },
+                        "processing_details": {
+                            "processed_lines": 6808,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wikievents.ner.train.42.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 43.75
+                        },
+                        "processing_details": {
+                            "processed_lines": 6808,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wnut17.ner": {
+                "files_count": 3,
+                "aggregate_unique_types_count": 6,
+                "average_overlap_percentage": 66.67,
+                "per_file_reports": {
+                    "wnut17.ner.train.0.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 66.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 3394,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wnut17.ner.train.24.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 66.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 3394,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    },
+                    "wnut17.ner.train.42.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 66.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 3394,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "test_set_analysis": {
+        "files_processed_count": 37,
+        "aggregate_unique_types_count": 235,
+        "datasets": {
+            "ace05.eae": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 31,
+                "average_overlap_percentage": 9.68,
+                "per_file_reports": {
+                    "ace05.eae.test.jsonl": {
+                        "unique_types_count": 31,
+                        "overlap_with_guidex": {
+                            "count": 3,
+                            "percentage": 9.68
+                        },
+                        "processing_details": {
+                            "processed_lines": 368,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.ee": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 8,
+                "average_overlap_percentage": 12.5,
+                "per_file_reports": {
+                    "ace05.ee.test.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 12.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 676,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 7,
+                "average_overlap_percentage": 71.43,
+                "per_file_reports": {
+                    "ace05.ner.test.jsonl": {
+                        "unique_types_count": 7,
+                        "overlap_with_guidex": {
+                            "count": 5,
+                            "percentage": 71.43
+                        },
+                        "processing_details": {
+                            "processed_lines": 676,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.rc": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 16,
+                "average_overlap_percentage": 43.75,
+                "per_file_reports": {
+                    "ace05.rc.test.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 43.75
+                        },
+                        "processing_details": {
+                            "processed_lines": 586,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.re": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 6,
+                "average_overlap_percentage": 0.0,
+                "per_file_reports": {
+                    "ace05.re.test.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 676,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ace05.ver": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 5,
+                "average_overlap_percentage": 60.0,
+                "per_file_reports": {
+                    "ace05.ver.test.jsonl": {
+                        "unique_types_count": 5,
+                        "overlap_with_guidex": {
+                            "count": 3,
+                            "percentage": 60.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 676,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "bc5cdr.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 2,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "bc5cdr.ner.test.jsonl": {
+                        "unique_types_count": 2,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 4798,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "broadtwitter.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 3,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "broadtwitter.ner.test.jsonl": {
+                        "unique_types_count": 3,
+                        "overlap_with_guidex": {
+                            "count": 3,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 2002,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "casie.eae": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 5,
+                "average_overlap_percentage": 0.0,
+                "per_file_reports": {
+                    "casie.eae.test.jsonl": {
+                        "unique_types_count": 5,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 2000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "casie.ee": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 5,
+                "average_overlap_percentage": 0.0,
+                "per_file_reports": {
+                    "casie.ee.test.jsonl": {
+                        "unique_types_count": 5,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 2000,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "conll03.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 4,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "conll03.ner.test.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 3453,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_ai": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 14,
+                "average_overlap_percentage": 92.86,
+                "per_file_reports": {
+                    "crossner.crossner_ai.test.jsonl": {
+                        "unique_types_count": 14,
+                        "overlap_with_guidex": {
+                            "count": 13,
+                            "percentage": 92.86
+                        },
+                        "processing_details": {
+                            "processed_lines": 431,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_literature": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 91.67,
+                "per_file_reports": {
+                    "crossner.crossner_literature.test.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 91.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 416,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_music": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 13,
+                "average_overlap_percentage": 84.62,
+                "per_file_reports": {
+                    "crossner.crossner_music.test.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 11,
+                            "percentage": 84.62
+                        },
+                        "processing_details": {
+                            "processed_lines": 465,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_natural_science": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 17,
+                "average_overlap_percentage": 88.24,
+                "per_file_reports": {
+                    "crossner.crossner_natural_science.test.jsonl": {
+                        "unique_types_count": 17,
+                        "overlap_with_guidex": {
+                            "count": 15,
+                            "percentage": 88.24
+                        },
+                        "processing_details": {
+                            "processed_lines": 543,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner.crossner_politics": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 9,
+                "average_overlap_percentage": 88.89,
+                "per_file_reports": {
+                    "crossner.crossner_politics.test.jsonl": {
+                        "unique_types_count": 9,
+                        "overlap_with_guidex": {
+                            "count": 8,
+                            "percentage": 88.89
+                        },
+                        "processing_details": {
+                            "processed_lines": 651,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_ai": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 13,
+                "average_overlap_percentage": 92.31,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_ai.test.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 92.31
+                        },
+                        "processing_details": {
+                            "processed_lines": 431,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_literature": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 11,
+                "average_overlap_percentage": 90.91,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_literature.test.jsonl": {
+                        "unique_types_count": 11,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 90.91
+                        },
+                        "processing_details": {
+                            "processed_lines": 416,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_music": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 83.33,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_music.test.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 83.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 465,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_natural_science": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 16,
+                "average_overlap_percentage": 87.5,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_natural_science.test.jsonl": {
+                        "unique_types_count": 16,
+                        "overlap_with_guidex": {
+                            "count": 14,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 543,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "crossner_womisc.crossner_politics": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 8,
+                "average_overlap_percentage": 87.5,
+                "per_file_reports": {
+                    "crossner_womisc.crossner_politics.test.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 651,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "diann.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 2,
+                "average_overlap_percentage": 50.0,
+                "per_file_reports": {
+                    "diann.ner.test.jsonl": {
+                        "unique_types_count": 2,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 50.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 1309,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "e3c.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 1,
+                "average_overlap_percentage": 0.0,
+                "per_file_reports": {
+                    "e3c.ner.test.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 0,
+                            "percentage": 0.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 851,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "europarl.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 4,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "europarl.ner.test.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 799,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "fabner.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 33.33,
+                "per_file_reports": {
+                    "fabner.ner.test.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 33.33
+                        },
+                        "processing_details": {
+                            "processed_lines": 2064,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "harveyner.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 4,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "harveyner.ner.test.jsonl": {
+                        "unique_types_count": 4,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 1303,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "mitmovie.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 75.0,
+                "per_file_reports": {
+                    "mitmovie.ner.test.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 9,
+                            "percentage": 75.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 2443,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "mitrestaurant.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 8,
+                "average_overlap_percentage": 87.5,
+                "per_file_reports": {
+                    "mitrestaurant.ner.test.jsonl": {
+                        "unique_types_count": 8,
+                        "overlap_with_guidex": {
+                            "count": 7,
+                            "percentage": 87.5
+                        },
+                        "processing_details": {
+                            "processed_lines": 1521,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "multinerd.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 15,
+                "average_overlap_percentage": 80.0,
+                "per_file_reports": {
+                    "multinerd.ner.test.jsonl": {
+                        "unique_types_count": 15,
+                        "overlap_with_guidex": {
+                            "count": 12,
+                            "percentage": 80.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 32908,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ncbidisease.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 1,
+                "average_overlap_percentage": 100.0,
+                "per_file_reports": {
+                    "ncbidisease.ner.test.jsonl": {
+                        "unique_types_count": 1,
+                        "overlap_with_guidex": {
+                            "count": 1,
+                            "percentage": 100.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 941,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "ontonotes5.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 18,
+                "average_overlap_percentage": 55.56,
+                "per_file_reports": {
+                    "ontonotes5.ner.test.jsonl": {
+                        "unique_types_count": 18,
+                        "overlap_with_guidex": {
+                            "count": 10,
+                            "percentage": 55.56
+                        },
+                        "processing_details": {
+                            "processed_lines": 12217,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "rams.eae": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 38,
+                "average_overlap_percentage": 15.79,
+                "per_file_reports": {
+                    "rams.eae.test.jsonl": {
+                        "unique_types_count": 38,
+                        "overlap_with_guidex": {
+                            "count": 6,
+                            "percentage": 15.79
+                        },
+                        "processing_details": {
+                            "processed_lines": 871,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "tacred.sf": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 5,
+                "average_overlap_percentage": 40.0,
+                "per_file_reports": {
+                    "tacred.sf.test.jsonl": {
+                        "unique_types_count": 5,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 40.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 2311,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wikievents.eae": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 28,
+                "average_overlap_percentage": 32.14,
+                "per_file_reports": {
+                    "wikievents.eae.test.jsonl": {
+                        "unique_types_count": 28,
+                        "overlap_with_guidex": {
+                            "count": 9,
+                            "percentage": 32.14
+                        },
+                        "processing_details": {
+                            "processed_lines": 321,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wikievents.ee": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 13,
+                "average_overlap_percentage": 15.38,
+                "per_file_reports": {
+                    "wikievents.ee.test.jsonl": {
+                        "unique_types_count": 13,
+                        "overlap_with_guidex": {
+                            "count": 2,
+                            "percentage": 15.38
+                        },
+                        "processing_details": {
+                            "processed_lines": 573,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wikievents.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 12,
+                "average_overlap_percentage": 50.0,
+                "per_file_reports": {
+                    "wikievents.ner.test.jsonl": {
+                        "unique_types_count": 12,
+                        "overlap_with_guidex": {
+                            "count": 6,
+                            "percentage": 50.0
+                        },
+                        "processing_details": {
+                            "processed_lines": 573,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            },
+            "wnut17.ner": {
+                "files_count": 1,
+                "aggregate_unique_types_count": 6,
+                "average_overlap_percentage": 66.67,
+                "per_file_reports": {
+                    "wnut17.ner.test.jsonl": {
+                        "unique_types_count": 6,
+                        "overlap_with_guidex": {
+                            "count": 4,
+                            "percentage": 66.67
+                        },
+                        "processing_details": {
+                            "processed_lines": 1287,
+                            "skipped_line_counts": {
+                                "json": 0,
+                                "ast": 0,
+                                "other": 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "overall_guidex_comparison": {
+        "train": {
+            "gold_unique_types_count": 243,
+            "overlapping_types_count": 103,
+            "gold_coverage_percentage": 42.39,
+            "gold_types_not_in_guidex_count": 140
+        },
+        "test": {
+            "gold_unique_types_count": 235,
+            "overlapping_types_count": 98,
+            "gold_coverage_percentage": 41.7,
+            "gold_types_not_in_guidex_count": 137
+        }
+    }
+}
