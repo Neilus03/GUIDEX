@@ -1,4 +1,4 @@
-# GuideX: Guided Synthetic Data Generation for Zero-Shot Information Extraction
+# GuideX: Guided Synthetic Data Generation for Zero-Shot Information Extraction *(ACL Findings 2025)*
 
 This repository contains the official implementation of GuideX, a novel method for synthetic data generation that automatically defines domain-specific schemas, infers guidelines, and generates synthetically labeled instances for Information Extraction (IE) tasks.
 
