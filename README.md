@@ -21,11 +21,10 @@ Our paper is available at [neilus03.github.io/guidex.com](neilus03.github.io/gui
 ## 🚀 Coming Soon
 
 We are in the process of open-sourcing the following components:
-
-1. **Models**: GuideX fine-tuned models
-2. **Dataset**: GuideX training and evaluation datasets
-3. **Code**: Complete implementation of the GuideX framework
-4. **Reproduction Guide**: Step-by-step instructions to reproduce our experiments
+- [ ] **Models**: GuideX fine-tuned models
+- [x] **Dataset**: GuideX training and evaluation datasets ([link](https://huggingface.co/datasets/HiTZ/GuideX_pre-training_data))
+- [x] **Code**: Complete implementation of the GuideX framework
+- [ ] **Reproduction Guide**: Step-by-step instructions to reproduce our experiments
 
 ## 🛠️ Setup
 
