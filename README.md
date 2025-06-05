@@ -4,7 +4,7 @@ This repository contains the official implementation of GuideX, a novel method f
 
 ## 📚 Paper
 
-Our paper is available at [guidex.com](neilus03.github.io/guidex.com). Please cite our work if you use our code or models:
+Our paper is available at [guidex.com](https://neilus03.github.io/guidex.com/). Please cite our work if you use our code or models:
 
 ```bibtex
 @misc{delafuente2025guidexguidedsyntheticdata,
