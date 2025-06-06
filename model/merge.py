@@ -1,67 +1,53 @@
 #!/usr/bin/env python3
 """
-Merge GoLLIE-Plus LoRA adapters with the Llama-3 8B base model.
+Merge GUIDEX+Gold_FT LoRA adapters into Meta-Llama-3-8B on CPU and save as
+GUIDEX_GOLD_8B.
 
-Install requirements in your conda env first:
-    pip install "torch>=2.2" transformers peft bitsandbytes
-
-Run from the same directory:
+Run:
     cd /sorgin1/users/neildlf/GoLLIE-dev/model
     python merge.py
 """
 
-import logging
 from pathlib import Path
-import sys
-
+import logging
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from peft import PeftModel
+from peft import PeftModel, PeftConfig
 
+# ── paths ──────────────────────────────────────────────────────────────────
+HERE       = Path(__file__).parent
+BASE_MODEL = "meta-llama/Meta-Llama-3-8B"
+LORA_DIR   = HERE / "Gold_FT" / "GoLLIE+-8b_Llama3_BS128_R128"
+OUT_DIR    = HERE / "Gold_FT" / "GOLD_8B"
+OUT_DIR.mkdir(parents=True, exist_ok=True)
 
-def merge_lora(
-    base_model_path: str,
-    lora_path: str,
-    output_path: str,
-    dtype: str = "bfloat16",
-) -> None:
-    """Load base weights and LoRA adapters, merge, then save."""
-    logging.info("Loading base model: %s", base_model_path)
-    base_model = AutoModelForCausalLM.from_pretrained(
-        base_model_path,
-        torch_dtype=torch.bfloat16 if dtype == "bfloat16" else getattr(torch, dtype),
-        device_map="auto",          # spreads layers across available GPUs/CPU
-    )
+# ── logging ────────────────────────────────────────────────────────────────
+logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
+logging.info("Base model : %s", BASE_MODEL)
+logging.info("LoRA path  : %s", LORA_DIR)
+logging.info("🚀  Everything will be loaded on CPU to avoid GPU OOM.")
 
-    logging.info("Loading LoRA adapters from: %s", lora_path)
-    lora_model = PeftModel.from_pretrained(base_model, lora_path)
+# ── 1. load base model fully on CPU ────────────────────────────────────────
+base = AutoModelForCausalLM.from_pretrained(
+    BASE_MODEL,
+    torch_dtype=torch.float16,               # keeps RAM reasonable
+    device_map={"": "cpu"},                  # **stay on CPU**
+    low_cpu_mem_usage=True,
+)
 
-    logging.info("Merging adapters into base weights …")
-    merged = lora_model.merge_and_unload()   # returns a plain HF model
+# ── 2. load adapter config & patch target-modules if needed ────────────────
+cfg = PeftConfig.from_pretrained(LORA_DIR)
+if set(cfg.target_modules) in ({"base_layer"}, set()):
+    cfg.target_modules = [
+        "q_proj", "k_proj", "v_proj", "o_proj",
+        "gate_proj", "up_proj", "down_proj",
+    ]
+    logging.info("Patched adapter target-modules → %s", cfg.target_modules)
 
-    logging.info("Saving merged model to: %s", output_path)
-    Path(output_path).mkdir(parents=True, exist_ok=True)
-    merged.save_pretrained(output_path)
-    AutoTokenizer.from_pretrained(base_model_path).save_pretrained(output_path)
+# ── 3. attach adapters, merge, save ────────────────────────────────────────
+lora_model = PeftModel.from_pretrained(base, LORA_DIR, config=cfg)
+merged     = lora_model.merge_and_unload()        # plain HF model, still on CPU
 
-    logging.info("Done – merged model ready.")
-
-
-def main() -> None:
-    here = Path(__file__).parent
-
-    base_model = "meta-llama/Meta-Llama-3-8B"
-    lora_dir   = here / "GUIDEX+Gold_FT" / "GoLLIE+-8b_Llama3_BS128_R128_finetuning"
-    out_dir    = here / "GUIDEX+Gold_FT" / "GUIDEX_GOLD_8B"
-
-    merge_lora(
-        base_model_path=str(base_model),
-        lora_path=str(lora_dir),
-        output_path=str(out_dir),
-        dtype="bfloat16",
-    )
-
-
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, format="%(asctime)s | %(levelname)s | %(message)s")
-    main()
+merged.save_pretrained(OUT_DIR)
+AutoTokenizer.from_pretrained(BASE_MODEL).save_pretrained(OUT_DIR)
+logging.info("✅  merged weights written to  %s", OUT_DIR)
