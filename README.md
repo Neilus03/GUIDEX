@@ -55,7 +55,7 @@ setenv HF_TOKEN "<your_huggingface_token>"
 
 4. Run the pipeline
 ```bash
-python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_out.jsonl --batch-size 32
+python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_data.jsonl --batch-size 32
 ```
 
 5. Check the output's first 10 lines
