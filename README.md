@@ -42,6 +42,10 @@ setenv HF_TOKEN "<your_huggingface_token>"
 python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_out.jsonl --batch-size 32
 ```
 
+## Doing NER with GuideX
+
+
+
 ## 📝 License
 
 This project is licensed under the terms of the license included in the repository.
