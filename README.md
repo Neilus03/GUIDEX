@@ -34,15 +34,39 @@ The project uses Python 3.7+ and is managed through `pyproject.toml`. Key depend
 
 To generate a GuideX dataset, you can use the `GUIDEX_pipeline.py` script. This script will generate a GuideX dataset from a given input file. We provide a small example dataset in `data/GUIDEX_gen/fineweb-edu-1k.json`, that you can use to test the pipeline.
 
+To generate a GuideX dataset, you need to have a Hugging Face token. You can get one by logging in to your Hugging Face account and going to [this page](https://huggingface.co/settings/tokens).
+
+1. Clone the repository
+```bash
+git clone https://github.com/HiTZ/GUIDEX.git
+cd GUIDEX
+```
+
+2. Install the dependencies
+```bash
+pip install -r requirements.txt
+```
+
+3. Set the Hugging Face token
 ```bash
 cd data/GUIDEX_gen
 setenv HF_TOKEN "<your_huggingface_token>"
 ```
+
+4. Run the pipeline
 ```bash
 python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_out.jsonl --batch-size 32
 ```
 
+5. Check the output's first 10 lines
+```bash
+cat guidex_out.jsonl | head -n 10
+```
+
+
+
 ## Doing NER with GuideX
+
 
 
 
