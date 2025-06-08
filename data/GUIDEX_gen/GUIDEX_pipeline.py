@@ -44,6 +44,7 @@ import os
 
 # ─────────────────── configuration ────────────────────
 MODEL_NAME         = "meta-llama/Llama-3.1-70B-Instruct"
+MAX_TOKENS = 8192  # Maximum tokens allowed per entry
 
 # Load the Hugging Face token from an environment variable
 HF_TOKEN = os.environ.get("HF_TOKEN")
@@ -75,7 +76,7 @@ login(token=HF_TOKEN)
 torch.cuda.empty_cache()
 logging.info("Loading model %s …", MODEL_NAME)
 llm = LLM(model=MODEL_NAME, tokenizer=MODEL_NAME, dtype=torch.bfloat16,
-          download_dir=CACHE_DIR, tensor_parallel_size=2, max_model_len=8192)
+          download_dir=CACHE_DIR, tensor_parallel_size=2, max_model_len=8192) 
 logging.info("Model ready")
 
 # ─────────────────── helpers ───────────────────────────
@@ -190,44 +191,63 @@ result_instances = [
 
 # ──────────── Stage 1 ───────────
 
+def _count_tokens(text: str) -> int:
+    """Count the number of tokens in a text using the model's tokenizer."""
+    return len(llm.get_tokenizer().encode(text))
+
 def annotate(docs: List[Dict[str, Any]], dest: Path, batch: int):
     logging.info("[1/3] Annotating %d docs (batch=%d)…", len(docs), batch)
+    skipped = 0
     for start in tqdm(range(0, len(docs), batch), unit="batch"):
         chunk = docs[start:start + batch]
         hist = [[] for _ in chunk]
-
+        
+        # Filter out entries that are too long
+        valid_chunk = []
+        valid_indices = []
+        for i, doc in enumerate(chunk):
+            if _count_tokens(doc['text']) > MAX_TOKENS:
+                logging.warning(f"Skipping document {start + i} - exceeds {MAX_TOKENS} tokens (text length: {_count_tokens(doc['text'])})")
+                skipped += 1
+                continue
+            valid_chunk.append(doc)
+            valid_indices.append(i)
+            
+        if not valid_chunk:
+            continue
+            
         # 1 summary
         p1 = [
             f"Use bullet points to summarize the main ideas of the following text, keeping the most important information. Text: '{d['text']}'. Summarize these points concisely."
-            for d in chunk
+            for d in valid_chunk
         ]
 
-        r1 = _query_llm(p1, hist)
+        r1 = _query_llm(p1, [hist[i] for i in valid_indices])
         for i, r in enumerate(r1):
-            _save_raw(r, f"step1_{start+i}.txt")
-            hist[i] = _push(hist[i], p1[i], r)
+            _save_raw(r, f"step1_{start+valid_indices[i]}.txt")
+            hist[valid_indices[i]] = _push(hist[valid_indices[i]], p1[i], r)
 
         # 2 compact JSON
-        p2 = [_DEF_PROMPT_STEP2 for _ in chunk]
-        r2 = _query_llm(p2, hist)
+        p2 = [_DEF_PROMPT_STEP2 for _ in valid_chunk]
+        r2 = _query_llm(p2, [hist[i] for i in valid_indices])
         for i, r in enumerate(r2):
-            _save_raw(r, f"step2_{start+i}.txt")
-            hist[i] = _push(hist[i], _DEF_PROMPT_STEP2, r)
+            _save_raw(r, f"step2_{start+valid_indices[i]}.txt")
+            hist[valid_indices[i]] = _push(hist[valid_indices[i]], _DEF_PROMPT_STEP2, r)
 
         # 3 guidelines
-        r3 = _query_llm([PROMPT_P3] * len(chunk), hist)
+        r3 = _query_llm([PROMPT_P3] * len(valid_chunk), [hist[i] for i in valid_indices])
         guidelines = []
         for i, r in enumerate(r3):
-            _save_raw(r, f"step3_{start+i}.txt")
-            hist[i] = _push(hist[i], PROMPT_P3, r)
+            _save_raw(r, f"step3_{start+valid_indices[i]}.txt")
+            hist[valid_indices[i]] = _push(hist[valid_indices[i]], PROMPT_P3, r)
             guidelines.append(_extract_code(r))
 
         # 4 result_instances
-        r4 = _query_llm([PROMPT_P4] * len(chunk), hist)
+        r4 = _query_llm([PROMPT_P4] * len(valid_chunk), [hist[i] for i in valid_indices])
         instances = []
         for i, r in enumerate(r4):
-            _save_raw(r, f"step4_{start+i}.txt")
-            hist[i] = _push(hist[i], PROMPT_P4, r, end=True)
+            _save_raw(r, f"step4_{start+valid_indices[i]}.txt")
+            hist[valid_indices[i]] = _push(hist[valid_indices[i]], PROMPT_P4, r, end=True)
             raw = _extract_code(r)
             
             cleaned = raw.lstrip()                          
@@ -236,13 +256,16 @@ def annotate(docs: List[Dict[str, Any]], dest: Path, batch: int):
             instances.append(cleaned)
 
         # write
-        for i, doc in enumerate(chunk):
+        for i, doc in enumerate(valid_chunk):
             doc["annotation_guidelines_as_dataclass"] = guidelines[i]
             doc["result_instances"] = instances[i]
             if guidelines[i] and instances[i]:
                 _append_jsonl(_make_record(doc), dest)
             else:
-                logging.warning("[skip] incomplete doc %d", start + i)
+                logging.warning("[skip] incomplete doc %d", start + valid_indices[i])
+                
+    if skipped > 0:
+        logging.info(f"Skipped {skipped} documents that exceeded {MAX_TOKENS} tokens")
 
 # ──────────── Stage 2: dedup ───────────
 
@@ -282,7 +305,8 @@ def load_input(path: Path, limit: int | None):
     if path.suffix == ".jsonl":
         rows = [json.loads(l) for l in path.read_text().splitlines() if l.strip()]
     else:
-        rows = json.loads(path.read_text())["items"]
+        data = json.loads(path.read_text())
+        rows = data["items"] if isinstance(data, dict) and "items" in data else data
     return rows[:limit] if limit else rows
 
 # ──────────── main ───────────

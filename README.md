@@ -47,10 +47,10 @@ git clone https://github.com/HiTZ/GUIDEX.git
 cd GUIDEX
 ```
 
-2. Create a conda environment and install the dependencies
+2. Create a virtual environment and install the dependencies
 ```bash
-conda create -n guidex python=3.10
-conda activate guidex
+python3 -m venv guidex_env 
+source guidex_env/bin/activate.csh
 pip install -r requirements.txt
 ```
 
@@ -65,7 +65,7 @@ setenv HF_TOKEN "<your_huggingface_token>"
 python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_data.jsonl --batch-size 32
 ```
 
-The Llama3.1-70B model with which we annotate the GuideX dataset ios big, probably won't fit in your GPU. You can use the `run_GUIDEX_pipeline_1.slurm` script to run the pipeline on a cluster, our experiments were run on a cluster with 2x A100 GPUs.
+The Llama3.1-70B-Instruct model with which we annotate the GuideX dataset ios big, probably won't fit in your GPU. You can use the `run_GUIDEX_pipeline_1.slurm` script to run the pipeline on a cluster, our experiments were run on a cluster with 2x A100 GPUs.
 
 ```bash
 sbatch run_GUIDEX_pipeline_cluster.slurm
