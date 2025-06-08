@@ -1,4 +1,9 @@
-# GuideX: Guided Synthetic Data Generation for Zero-Shot Information Extraction *(ACL Findings 2025)*
+
+<p align="center">
+  <img src="assets/guidex-png.png" width="500">
+</p>
+
+# Guided Synthetic Data Generation for Zero-Shot Information Extraction *(ACL Findings 2025)*
 
 This repository contains the official implementation of GuideX, a novel method for synthetic data generation that automatically defines domain-specific schemas, infers guidelines, and generates synthetically labeled instances for Information Extraction (IE) tasks.
 
@@ -42,8 +47,10 @@ git clone https://github.com/HiTZ/GUIDEX.git
 cd GUIDEX
 ```
 
-2. Install the dependencies
+2. Create a conda environment and install the dependencies
 ```bash
+conda create -n guidex python=3.10
+conda activate guidex
 pip install -r requirements.txt
 ```
 
@@ -56,6 +63,12 @@ setenv HF_TOKEN "<your_huggingface_token>"
 4. Run the pipeline
 ```bash
 python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_data.jsonl --batch-size 32
+```
+
+The Llama3.1-70B model with which we annotate the GuideX dataset ios big, probably won't fit in your GPU. You can use the `run_GUIDEX_pipeline_1.slurm` script to run the pipeline on a cluster, our experiments were run on a cluster with 2x A100 GPUs.
+
+```bash
+sbatch run_GUIDEX_pipeline_cluster.slurm
 ```
 
 5. Check the output's first 10 lines
