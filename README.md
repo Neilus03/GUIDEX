@@ -30,6 +30,18 @@ We are in the process of open-sourcing the following components:
 
 The project uses Python 3.7+ and is managed through `pyproject.toml`. Key dependencies will be listed here once the reproduction guide is complete.
 
+## Generating a GuideX dataset
+
+To generate a GuideX dataset, you can use the `GUIDEX_pipeline.py` script. This script will generate a GuideX dataset from a given input file. We provide a small example dataset in `data/GUIDEX_gen/fineweb-edu-1k.json`, that you can use to test the pipeline.
+
+```bash
+cd data/GUIDEX_gen
+setenv HF_TOKEN "<your_huggingface_token>"
+```
+```bash
+python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_out.jsonl --batch-size 32
+```
+
 ## 📝 License
 
 This project is licensed under the terms of the license included in the repository.

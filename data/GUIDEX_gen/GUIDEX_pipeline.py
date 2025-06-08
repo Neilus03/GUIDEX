@@ -48,6 +48,8 @@ MODEL_NAME         = "meta-llama/Llama-3.1-70B-Instruct"
 # Load the Hugging Face token from an environment variable
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
+
+
 if not HF_TOKEN:
     raise ValueError("Hugging Face token not found. Please set the HF_TOKEN environment variable.")
 
@@ -186,7 +188,7 @@ result_instances = [
 ]
 ```'''
 
-# ──────────── Stage 1 ───────────
+# ──────────── Stage 1 ───────────
 
 def annotate(docs: List[Dict[str, Any]], dest: Path, batch: int):
     logging.info("[1/3] Annotating %d docs (batch=%d)…", len(docs), batch)
@@ -242,7 +244,7 @@ def annotate(docs: List[Dict[str, Any]], dest: Path, batch: int):
             else:
                 logging.warning("[skip] incomplete doc %d", start + i)
 
-# ──────────── Stage 2: dedup ───────────
+# ──────────── Stage 2: dedup ───────────
 
 def dedup(src: Path, dst: Path):
     seen = set(); kept = 0
@@ -256,7 +258,7 @@ def dedup(src: Path, dst: Path):
                 kept += 1
     logging.info("[2/3] Deduplicated – kept %d unique rows", kept)
 
-# ──────────── Stage 3: exec filter ───────────
+# ──────────── Stage 3: exec filter ───────────
 
 def exec_filter(src: Path, dst: Path):
     gbl = {"List": list, "Optional": type(None), "Dict": dict, "Any": object}
