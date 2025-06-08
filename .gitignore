@@ -163,3 +163,7 @@ model/GUIDEX_FT*
 model/GUIDEX+Gold_FT*
 model/curriculum-masking-negatives*
 model/dif-sizes
+
+# Large data files
+data/GUIDEX_gen/GUIDEX-100k.jsonl
+data/GUIDEX_gen/fineweb-edu-100k.json
