@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="assets/guidex-png.png" width="500">
+  <img src="assets/guidex-png.png" width="250">
 </p>
 
 # Guided Synthetic Data Generation for Zero-Shot Information Extraction *(ACL Findings 2025)*
