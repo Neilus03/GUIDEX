@@ -49,7 +49,7 @@ cd GUIDEX
 
 2. Create a virtual environment and install the dependencies
 ```bash
-python3 -m venv guidex_env 
+python3.9 -m venv guidex_env 
 source guidex_env/bin/activate.csh
 pip install -r requirements.txt
 ```
