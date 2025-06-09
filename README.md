@@ -7,22 +7,6 @@
 
 This repository contains the official implementation of GuideX, a novel method for synthetic data generation that automatically defines domain-specific schemas, infers guidelines, and generates synthetically labeled instances for Information Extraction (IE) tasks.
 
-## 📚 Paper
-
-Our paper is available at [guidex.com](https://neilus03.github.io/guidex.com/). Please cite our work if you use our code or models:
-
-```bibtex
-@misc{delafuente2025guidexguidedsyntheticdata,
-      title={GuideX: Guided Synthetic Data Generation for Zero-Shot Information Extraction}, 
-      author={Neil De La Fuente and Oscar Sainz and Iker García-Ferrero and Eneko Agirre},
-      year={2025},
-      eprint={2506.00649},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL},
-      url={https://arxiv.org/abs/2506.00649}, 
-}
-```
-
 ## 🚀 Coming Soon
 
 We are in the process of open-sourcing the following components:
@@ -86,7 +70,21 @@ We provide a comprehensive Jupyter notebook that guides you through the entire p
 ## 📊 Results  
 
 
+## 📚 Paper
 
+Our paper is available at [guidex.com](https://neilus03.github.io/guidex.com/). Please cite our work if you use our code or models:
+
+```bibtex
+@misc{delafuente2025guidexguidedsyntheticdata,
+      title={GuideX: Guided Synthetic Data Generation for Zero-Shot Information Extraction}, 
+      author={Neil De La Fuente and Oscar Sainz and Iker García-Ferrero and Eneko Agirre},
+      year={2025},
+      eprint={2506.00649},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2506.00649}, 
+}
+```
 
 
 ## 🤝 Contributing
