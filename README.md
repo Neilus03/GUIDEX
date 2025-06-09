@@ -80,7 +80,7 @@ cat guidex_out.jsonl | head -n 10
 
 ## Doing NER with GuideX
 
-
+We provide a comprehensive Jupyter notebook that guides you through the entire process of performing Named Entity Recognition (NER) with a GuideX-finetuned model. You can find this notebook in the repository at `GUIDEX/notebooks/Named Entity Recognition.ipynb`.
 
 
 ## 📝 License

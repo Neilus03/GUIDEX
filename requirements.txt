@@ -143,3 +143,5 @@ xformers==0.0.30
 xgrammar==0.1.19
 yarl==1.20.0
 zipp==3.22.0
+black
+accelerate
