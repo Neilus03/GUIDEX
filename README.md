@@ -83,9 +83,11 @@ cat guidex_out.jsonl | head -n 10
 We provide a comprehensive Jupyter notebook that guides you through the entire process of performing Named Entity Recognition (NER) with a GuideX-finetuned model. You can find this notebook in the repository at `GUIDEX/notebooks/Named Entity Recognition.ipynb`. 
 
 
-## 📝 License
+## 📊 Results  
 
-This project is licensed under the terms of the license included in the repository.
+
+
+
 
 ## 🤝 Contributing
 
@@ -97,4 +99,4 @@ For questions and feedback, please contact Neil De La Fuente at neil.de@tum.de.
 
 ---
 
-*Note: This repository is under active development. More details about setup, usage, and reproduction will be added soon.*
+*Note: This repository is under active development.*
