@@ -5,19 +5,11 @@
 
 # Guided Synthetic Data Generation for Zero-Shot Information Extraction *(ACL Findings 2025)*
 
-This repository contains the official implementation of GuideX, a novel method for synthetic data generation that automatically defines domain-specific schemas, infers guidelines, and generates synthetically labeled instances for Information Extraction (IE) tasks.
-
-## 🚀 Coming Soon
-
-We are in the process of open-sourcing the following components:
-- [x] **Models**: GuideX fine-tuned models
-- [x] **Dataset**: GuideX training and evaluation datasets ([link](https://huggingface.co/datasets/HiTZ/GuideX_pre-training_data))
-- [x] **Code**: Complete implementation of the GuideX framework
-- [ ] **Reproduction Guide**: Step-by-step instructions to reproduce our experiments
+This repository contains the official implementation of GuideX, a novel method for synthetic data generation that automatically defines domain-specific schemas, infers guidelines, and generates synthetically labeled instances for Information Extraction (IE) tasks. We achieve SOTA zero-shot NER performance by finetuning Llama-3.1-8B on our GuideX dataset.
 
 ## 🛠️ Setup
 
-The project uses Python 3.7+ and is managed through `pyproject.toml`. Key dependencies will be listed here once the reproduction guide is complete.
+The project uses Python 3.9.7+ and is managed through `pyproject.toml`. 
 
 ## Generating a GuideX dataset
 
@@ -68,7 +60,18 @@ We provide a comprehensive Jupyter notebook that guides you through the entire p
 
 
 ## 📊 Results  
+![table2](https://github.com/user-attachments/assets/6295ddde-a2c9-4010-8c2a-a5560703a407)
+![table3](https://github.com/user-attachments/assets/b399ed48-313b-4a88-9e17-b5f4cb788840)
+![table4](https://github.com/user-attachments/assets/ead391ed-f820-41fd-93b5-6e7cff998c10)
 
+
+## 🚀 Open Source Plan
+
+We are open-sourcing the following components:
+- [x] **Models**: GuideX fine-tuned models  ([link](https://huggingface.co/datasets/HiTZ/Llama-3.1-GuideX-8B)
+- [x] **Dataset**: GuideX training and evaluation datasets ([link](https://huggingface.co/datasets/HiTZ/GuideX_pre-training_data))
+- [x] **Code**: Complete implementation of the GuideX framework
+- [x] **Reproduction Guide**: Step-by-step instructions to reproduce our experiments (below)
 
 ## 📚 Paper
 
