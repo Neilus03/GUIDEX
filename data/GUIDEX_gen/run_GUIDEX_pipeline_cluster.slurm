@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=run_vllm_dataset
+#SBATCH --job-name=run_GUIDEX_vllm_dataset
 #SBATCH --cpus-per-task=16
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --time=7-00:00:00          # Adjust if needed
+#SBATCH --time=7-00:00:00          
 #SBATCH --mem=256GB                # Increase if you encounter memory issues
 #SBATCH --gres=gpu:2
 #SBATCH --output=GUIDEX_gen_out.%j.out
@@ -38,12 +38,12 @@ export HF_DATASETS_CACHE="$SLURM_SUBMIT_DIR/.cache/datasets"
 mkdir -p $HF_HUB_CACHE
 mkdir -p $HF_DATASETS_CACHE
 
-# Activate your conda environment
-# Assumes conda is initialized (e.g. by running `conda init bash` once)
+# Activate your venv environment, assumes it is in the GUIDEX directory
 source ../../guidex_env/bin/activate
-#conda activate guidex
+
 
 echo "Environment activated"
+
 
 # Verify CUDA availability
 python -c "import torch; print('CUDA available:', torch.cuda.is_available()); print('CUDA devices:', torch.cuda.device_count())"
