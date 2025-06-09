@@ -112,9 +112,41 @@ def _build_prompts(cur: List[str], hist: List[List[Dict[str, str]]]):
             out.append(f"User: {p}\nAssistant:")
     return out
 
+def _count_tokens(text: str) -> int:
+    """Count the number of tokens in a text using the model's tokenizer."""
+    return len(llm.get_tokenizer().encode(text))
+
+def _get_total_prompt_length(prompt: str, history: List[Dict[str, str]]) -> int:
+    """Calculate total tokens including prompt and conversation history."""
+    history_text = "".join(f"{e['role'].capitalize()}: {e['content']}\n" for e in history)
+    full_prompt = history_text + f"User: {prompt}\nAssistant:"
+    return _count_tokens(full_prompt)
+
 def _query_llm(prompts: List[str], hist: List[List[Dict[str, str]]]):
-    outputs = llm.generate(_build_prompts(prompts, hist), SamplingParams(**SAMPLING_KWARGS))
-    return [o.outputs[0].text.strip() for o in outputs]
+    valid_prompts = []
+    valid_histories = []
+    valid_indices = []
+    
+    for i, (prompt, history) in enumerate(zip(prompts, hist)):
+        total_length = _get_total_prompt_length(prompt, history)
+        if total_length > MAX_TOKENS:
+            logging.warning(f"Skipping prompt {i} - total length {total_length} exceeds {MAX_TOKENS} tokens")
+            continue
+        valid_prompts.append(prompt)
+        valid_histories.append(history)
+        valid_indices.append(i)
+    
+    if not valid_prompts:
+        return [""] * len(prompts)
+        
+    outputs = llm.generate(_build_prompts(valid_prompts, valid_histories), SamplingParams(**SAMPLING_KWARGS))
+    
+    # Reconstruct full output list with empty strings for skipped prompts
+    result = [""] * len(prompts)
+    for idx, output in zip(valid_indices, outputs):
+        result[idx] = output.outputs[0].text.strip()
+    
+    return result
 
 def _push(hist, prompt, resp, end=False):
     if end:
@@ -190,10 +222,6 @@ result_instances = [
 ```'''
 
 # ──────────── Stage 1 ───────────
-
-def _count_tokens(text: str) -> int:
-    """Count the number of tokens in a text using the model's tokenizer."""
-    return len(llm.get_tokenizer().encode(text))
 
 def annotate(docs: List[Dict[str, Any]], dest: Path, batch: int):
     logging.info("[1/3] Annotating %d docs (batch=%d)…", len(docs), batch)
