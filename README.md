@@ -42,7 +42,7 @@ setenv HF_TOKEN "<your_huggingface_token>"
 python GUIDEX_pipeline.py --input fineweb-edu-1k.json --output guidex_data.jsonl --batch-size 32
 ```
 
-The Llama3.1-70B-Instruct model with which we annotate the GuideX dataset ios big, probably won't fit in your GPU. You can use the `run_GUIDEX_pipeline_1.slurm` script to run the pipeline on a cluster, our experiments were run on a cluster with 2x A100 GPUs.
+The Llama3.1-70B-Instruct model with which we annotate the GuideX dataset is big, probably won't fit in your GPU. You can use the `run_GUIDEX_pipeline_1.slurm` script to run the pipeline on a cluster, our experiments were run on a cluster with 2x A100 GPUs.
 
 ```bash
 sbatch run_GUIDEX_pipeline_cluster.slurm
