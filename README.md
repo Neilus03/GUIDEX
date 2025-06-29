@@ -7,7 +7,7 @@
 
 This repository contains the official implementation of GuideX, a novel method for synthetic data generation that automatically defines domain-specific schemas, infers guidelines, and generates synthetically labeled instances for Information Extraction (IE) tasks. We achieve SOTA zero-shot NER performance by finetuning Llama-3.1-8B on our GuideX dataset.
  
-## [Project Page](https://neilus03.github.io/guidex.com)
+## [GuideX Project Page](https://neilus03.github.io/guidex.com)
 ## 🛠️ Setup
 
 The project uses Python 3.9.7+ and is managed through `pyproject.toml`. 
