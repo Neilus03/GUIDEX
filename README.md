@@ -62,7 +62,7 @@ We provide a comprehensive Jupyter notebook that guides you through the entire p
 
 ## 📊 Results  
 ![table2](https://github.com/user-attachments/assets/6295ddde-a2c9-4010-8c2a-a5560703a407)
-![table3](https://github.com/user-attachments/assets/b399ed48-313b-4a88-9e17-b5f4cb788840)
+![table3](https://github.com/user-attachments/assets/b399ed48-313b-4a88-9e17-b5f4cb788840) 
 ![table4](https://github.com/user-attachments/assets/ead391ed-f820-41fd-93b5-6e7cff998c10)
 
 
