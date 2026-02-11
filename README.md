@@ -93,11 +93,11 @@ Our paper is available at [guidex.com](https://neilus03.github.io/guidex.com/). 
 
 ## 🤝 Contributing
 
-We welcome contributions! Please stay tuned for our contribution guidelines.
+We welcome contributions! 
 
 ## 📧 Contact
 
-For questions and feedback, please contact Neil De La Fuente at neil.de@tum.de.
+For questions and feedback, please contact Neil De La Fuente at nedela@ethz.ch
 
 ---
 
